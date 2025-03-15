@@ -1,17 +1,86 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ZeeJournal AI - Coming Soon</title>
+  <title>ZeeJournal - Coming Soon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Lato&display=swap" rel="stylesheet">
   <style>
-    body { background: #000; color: #fff; font-family: Arial, sans-serif; text-align: center; padding-top: 20%; }
-    h1 { font-size: 48px; }
-    p { font-size: 24px; }
-    .gold { color: #FFD700; }
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #007BFF, #8A2BE2);
+      overflow: hidden;
+      font-family: 'Lato', sans-serif;
+      color: #ffffff; /* Base text color */
+      text-align: center;
+      position: relative;
+    }
+    .container {
+      z-index: 1;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 60px;
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      transition: color 0.3s, text-shadow 0.3s;
+    }
+    p {
+      font-size: 28px;
+      margin: 10px 0;
+      transition: color 0.3s;
+    }
+    .emoji {
+      font-size: 40px;
+    }
+    /* Hover effects */
+    .container:hover h1 {
+      color: #000000;
+      text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
+    }
+    .container:hover p {
+      color: #fff;
+    }
+    /* Underline hover effect for paragraphs */
+    p:hover {
+      position: relative;
+    }
+    p:hover::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 100%;
+      height: 2px;
+      background: #fff;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s;
+    }
+    p:hover::after {
+      transform: scaleX(1);
+    }
+    /* Pattern Overlay */
+    .pattern {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><polygon points="20,0 40,20 20,40 0,20" fill="rgba(255,255,255,0.1)"/></svg>');
+      opacity: 0.2;
+      pointer-events: none;
+    }
   </style>
 </head>
 <body>
-  <h1><span class="gold">ZeeJournal AI</span> - Coming Soon</h1>
-  <p>Log Smart, Win Smarter – AI Insights Await</p>
-  <p>An AI-powered trading journal to boost your wins—built by a teen trader.</p>
+  <div class="pattern"></div>
+  <div class="container">
+    <h1>ZeeJournal</h1>
+    <p>Journal with AI. Unlock Your Trading Edge <span class="emoji">🚀✨</span></p>
+    <p>COMING SOON</p>
+  </div>
 </body>
 </html>
